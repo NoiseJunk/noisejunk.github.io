@@ -1,0 +1,849 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    background-color: rgb(255, 255, 255);
+    color: #555;
+    font-family: 'quicksand', 'Arial', 'sand-serif';
+    font-size: 20px;
+    font-weight: 300;
+    text-rendering: optimizeLegibility;
+}
+
+p {
+    color: #F1F5D8;
+}
+
+/*--------- Resuable Components -------*/
+
+.row {
+    
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+section {
+    padding: 10px;
+}
+
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9),rgba(0, 0, 0, 0.8)),url(img/palmbw.jpg);
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
+
+
+
+
+
+
+/*--------THIS CAN BE DELETED ONCE I SORT TOHE CORRECT CSS METHOD OUT----------------*/
+
+.launch-poster img {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-position: center;
+    
+}
+
+
+/*-----------NAVIGATION-------------*/
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 17px;
+    animation: moveInRight 2s ease-out;
+  
+}
+
+.main-nav li{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.main-nav li:last-child{
+    margin-right: 1px;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    padding: 8px 0;
+    text-decoration: none;
+    color: #F1F5D8;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #000000;
+    
+}
+
+/* Sticky Nav */
+
+.sticky{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(205, 201, 206, 0.96);
+    box-shadow: 0 1px 1px #6f6f6f;
+    z-index: 9999;
+}
+
+.sticky .main-nav {
+    float: right;
+    list-style: none;
+    margin-top: 12px;
+    margin-left: 300px;
+
+}
+
+.sticky .social-nav {
+    float: left;
+    list-style: none;
+    margin-top: 12px;
+}
+.sticky .social-links li i{
+    color: #000000;
+}
+
+.sticky .main-nav li a:link,
+.sticky .main-nav li a:visited{
+    padding: 8px 0;
+    color: #000;
+}
+
+.sticky .ion-social-facebook:hover{
+    color: #3b5998;
+}
+.sticky .ion-social-twitter:hover{
+    color:  #55acee;
+}
+.sticky .ion-social-youtube:hover{
+    color: #bb0000;
+}
+.sticky .ion-social-instagram:hover{
+    color: #125688;
+}
+.sticky .ion-cloud:hover{
+    color: #ff6600;
+}
+
+
+/*mobile Nav*/
+
+.mobile-nav-icon {
+    float: right; 
+    margin-top: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.mobile-nav-icon i {
+    font-size: 200%;
+    color: #F1F5D8;
+}
+
+
+/*----------Headings------------------*/
+
+@-webkit-keyframes color-change {
+    0% { color: #d0b459; }
+    25% { color: #a2dd82; }
+    50% {color: #dd76e2;}
+    75% { color: #e34343; }
+    100% {color: #86f3fc; }
+    
+}
+
+/*---
+
+h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 300%;   
+    word-spacing: 4px;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: quicksand;
+    font-weight: 100;
+    animation: color-change 10s infinite;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+
+---*/
+
+h2{
+    font-size: 180%;   
+    word-spacing: 2px;
+    text-align: center;
+    margin; 0;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    color: #F1F5D8;  
+}
+
+.mailing-list {
+    width: 25%;
+    text-align: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    display: inline-block;
+    transform: translate(-50%);
+    animation: moveInBottom .5s;
+    
+}
+.mailing-list input {
+    margin-top: 5px; 
+    padding-bottom: 5px;
+    
+}
+
+.button {
+    height: 30px;
+    width: 100%;
+    margin: 3px 0 0 0;
+    background-color: rgb(99, 168, 204);
+    
+    
+}
+
+.debut-news {
+    text-align: center;
+    color: white;
+    position: relative;
+    top: 10%;
+}
+
+#logo {
+    height: 40%;
+    min-height: 250px;
+    background-image: url(img/kesfbpqajre-jordan-whitt.jpg);
+    border-radius: 50%;
+    background-size: 100% 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    animation-name: fadeIn;
+    animation-duration: 7s;
+    animation-timing-function: ease-out;
+    backface-visibility: hidden;
+    
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    
+    }
+
+    80% {
+        
+    }
+
+    100%{
+        opacity: 1;
+    
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);
+
+    }
+}
+
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+
+
+
+.spotify-follow {
+    position: absolute;
+    bottom: 10px;
+    margin-left: 50px;
+
+}
+
+
+.section-funding {
+    padding-bottom: 20px;
+    background-image: linear-gradient(rgba(205, 221, 83, 0.28),rgba(237, 157, 89, 0.48)), url(img/italian-alps.jpg);
+    background-size: cover; 
+    text-align: center;
+    background-position: center;
+    background-attachment: fixed;
+    color: #F1F5D8;     
+}
+
+.funding {
+    color
+}
+
+.section-funding p {
+    text-align: center;
+    margin: 20px 10%;
+    color: 
+}
+
+.inflight {
+    width: 60%;
+    height: auto;
+    margin: 5%;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+}
+
+/*--------------------------------*/
+/*---------Social Nav---------*/
+/*--------------------------------*/
+
+.social-links li {
+    display: inline-block;
+    float: left;
+}
+
+.social-links li i{
+    color: #F1F5D8;
+    font-size: 25px;
+}
+
+.social-links li img{
+    height: 45px;
+    width: auto;
+    margin-top: 0px;
+    color: #F1F5D8;
+    
+}
+
+.social-nav {
+    float: left;
+    list-style: none;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    animation: moveInLeft 2s ease-out;
+}
+
+/*-----------Section Tour-------------*/
+
+.section-tour {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.04),rgba(0, 0, 0, 0.8)), url(img/maxresdefault.jpg);
+    background-size: cover;
+    color: #F1F5D8; 
+    background-attachment: fixed;
+
+ }
+
+.previous-gigs {
+    text-align: center;
+    margin: 20px;
+    padding-bottom: 30px;
+    align-content: center;
+     
+}
+
+.previous-gigs p {
+    letter-spacing: 5px;
+}
+
+
+/*-----------Section Videos-------------*/
+
+.section-videos {
+    background-image:linear-gradient(rgba(0, 0, 0, 0.04),rgba(0, 0, 0, 0.8)), url(img/margarita-sunset.jpg);
+    background-size: cover;
+    color: #F1F5D8; 
+    background-attachment: fixed;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    
+ }
+
+
+/*-----------Section about-------------*/
+
+.section-about {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.8)), url(img/bandbridge2.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.8)), url(img/FLBWPREM.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #F1F5D8; 
+    background-attachment: fixed;
+    padding-bottom: 2%;
+    
+ }
+
+.about {
+    width: 70%;
+    margin: 0% 15%;
+}
+
+/*-----------Press-------------*/
+
+.section-press{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.04),rgba(0, 0, 0, 0.8)), url(img/smoke.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #F1F5D8; 
+    background-attachment: fixed;
+    padding-bottom: 2%;
+    width: 100%;     
+}
+
+.box {
+    width: 100%;
+}
+
+
+
+.box img{
+    width:100%;
+    background-color: #000000;
+    border-radius: 10px;
+    opacity: 0.8;
+    overflow: hidden;
+    background-image: cover;
+    
+}
+
+.press-box: link, 
+.press-box: visited {
+    transition: all .2s;
+    position: relative;
+    
+}
+
+.press-box:hover {
+    transform: translateY(-2px);
+    transition: 1s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.24);
+}
+
+.press-box:active {
+    transform: translateY(-3px);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.24);
+
+}
+.section-press .box a {
+    text-decoration: none;
+    border-bottom: transparent;
+}
+
+
+.section-gallery {
+    padding: 0;
+    height: inherit;
+    
+}
+
+.gallery-showcase {
+    list-style: none;
+    width: 100%;
+
+}
+
+.gallery-showcase li {
+    display: block;
+    float: left;
+    width: 12.5%;
+}
+
+
+.gallery-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
+    filter: grayscale(.5);
+}
+
+.gallery-photo img:hover {
+    opacity: 1;
+    -webkit-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    transform: scale(1.03);
+    filter: grayscale(0);
+}
+
+/*--------------------------------*/
+/*----------Gallery----------*/
+/*--------------------------------*/
+
+
+
+.gallery-showcase {
+    list-style: none;
+    width: 100%;
+}
+
+
+.gallery-photo {
+    background: #000;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+sp
+.gallery-photo img{
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    -webkit-transform: scale(1.15);
+    transform: scale(1.15);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s; opacity: 0.5s;
+    margin-bottom: 30px;
+    
+}
+
+
+
+/*--------Links----------*/
+
+a:link,
+a:visited{
+    color: rgba(0, 0, 0, 0.65);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.65);
+    padding: 1px;
+    -webkit-transition: border-bottom 0.2s, color 0,2s;
+    transition: border-bottom 0.2s, color 0,2s;
+    
+}
+
+a:hover,
+a:active{
+    color: #555;
+    border-bottom: 1px solid transparent;
+}
+
+/*--------------------------------*/
+/*----------MUSIC----------*/
+/*--------------------------------*/
+
+.section-music {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.8)), url(img/record.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.8)), url(img/ZigfidBW.jpg);
+    background-size: cover;
+    color: #F1F5D8; 
+    background-attachment: fixed;
+    padding-bottom: 2%;
+
+}
+
+.playerdiv{
+    width: 80%;
+    margin: 5% 10% 2% 10%;
+    align-content: center;
+}
+
+.player {
+    width: 100%;
+    align-content: center;
+    padding: 2%;
+}
+    
+.main-title {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.shop-link-div {
+    width: 30%;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    position: relative;
+    top: 30px
+}
+
+.shop-links {
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+    text-align: center; 
+    text-decoration: none;
+}
+
+.shop-links a:link,
+.shop-links a:hover,
+.shop-links a:visited,
+.shop-links a:active, {
+    text-decoration: none;
+    border-bottom: none;
+}
+
+
+
+
+/*--------------------------------*/
+/*----------Contact----------*/
+/*--------------------------------*/
+
+
+.contact-container {
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.8)), url(img/record.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.8)), url(img/record.jpg);
+    background-size: cover;
+    color: #F1F5D8; 
+    background-attachment: fixed;
+    padding-bottom: 2%;
+    
+}
+
+.contact {
+    width: 60%;
+    height: auto;
+    margin-left: 20%;
+    
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+    overflow: auto;
+}
+
+
+.contact-form{
+    width: 60%;
+    margin: 0 auto;
+}
+
+
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #b5b5b5;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type=checkbox]{
+    margin; 10px 5px 10px 0: 
+}
+
+*:focus {
+    outline: none;
+}
+
+.alert {
+    margin: 5px;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.alert-danger {
+    background-color: red;
+    
+}
+
+.alert-success {
+    background-color: green;
+}
+
+.btn:link,
+.btn:visited {
+    padding: 5px;
+    border-radius: 5px;
+    background-color: lightgrey;
+    transform: translateY(3px);
+}
+
+
+.direct-contacts {
+    width: 100%;
+    text-align: center;
+}
+
+.copyright {
+    text-align: center;
+    color: #ffffff;
+}
+
+.quotes {
+    text-align: center;
+    width: 75%;
+    margin: 50px 12.5%;
+
+}
+
+.author {
+    text-align: right;
+}
+
+
+/*--------FOOTER -------*/
+
+.foot-copy {
+    background-color: #00CDC5;
+    width: 100%;
+
+}
+
+.foot-copy p {
+    padding: 10px;
+    color: #F1F5D8;
+    
+}
+
+.footer-nav {
+    list-style: none;
+    float: left;
+}
+
+.footer-nav li{
+    display: inline-block;
+}
+
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.social-links li:last-child{
+    margin-right: 0px;
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #9d9d9d;  
+    transition: color 0.2s;
+}
+
+.social-links li a:hover,
+.social-links li a:active{
+    text-decoration: none;
+    border: 0;
+    color: #ffffff;
+}
+social-links li a:link,
+social-links li a:visited,{
+    font-size: 180%;
+}
+
+
+.ion-social-facebook:hover{
+    color: #3b5998;
+}
+.ion-social-twitter:hover{
+    color:  #55acee;
+}
+.ion-social-youtube:hover{
+    color: #bb0000;
+}
+.ion-social-instagram:hover{
+    color: #125688;
+}
+.ion-cloud:hover{
+    color: #ff6600;
+}
+
+
+
+.insta {
+    width: 100%;
+    height: 100vh;
+}
+
+.ep {
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    align-content: center;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: solid black 5px;
+    background-color: black;
+}
+
+.eplaunch img {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+
+/* background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.8)), url(img/airport.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65),rgba(0, 0, 0, 0.8)), url(img/maxresdefault.jpg);*/

@@ -1,0 +1,202 @@
+
+
+
+/* for Big tablet to 1200px (widtch smaller than the 1140px row ) */
+
+@media only screen and (max-width: 1200px){
+    .row {
+        padding: 0 2%;
+    
+    }
+    .main-title {
+        display: none;
+    }
+    
+    .gallery-row {
+        padding: 0;
+    }
+    
+    .row foot-copy {
+        padding: 0;
+        background-color: #000;
+    }
+    
+}
+
+
+/* for small tablets to big tablet 768 - 1023px */
+
+@media only screen and (max-width: 1023px){
+    body{
+        font-size: 18px;
+    }
+    section{
+        padding: 0px 0;
+    }
+
+    .icon-small {
+        width: 20px;
+        margin-right: 5px;
+    }
+    
+    .section-gallery {
+        display: none;
+    }
+
+
+/* for small phones to small tablets 481 -767*/
+
+@media only screen and (max-width: 875px){
+    body{ font-size: 16px;}
+    section{padding: 30px 0}
+    .row {padding: 0 10%}
+    .col {width: 100%}
+
+    /*
+    header {
+    background-image: url(img/backoriginal.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+    }
+    */
+    
+    .main-nav {
+        display:none;
+    }
+    
+    
+    .mobile-nav-icon {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .main-nav li{
+        display: block;
+        z-index: 100;
+    }
+    .main-nav {
+        margin-top: 25px;
+        margin-left: 80px;
+        float: left;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        display: block;
+        border: 0;
+        padding: 10px 0;
+    }
+    
+    .sticky .main-nav {
+        margin-top: 10px;
+        float: left;
+    }
+    .sticky .mobile-nav-icon i{color: #000000;}
+    .sticky .mobile-nav-icon{margin-top: 10px}
+
+    .sticky .main-nav li a:link,
+    .sticky .main-nav li a:visited{
+        padding: 8px 0;
+        color:  ;
+}
+    .section-press {
+        height: 100%;
+        background-color: #D265AF;
+        background-image: none;
+    }
+    
+    .section-press a img {
+        width: 80%;
+        margin-left: 10%;
+    }
+    
+    .section-funding {
+        height: 100%;
+        background-color: #b246e2;
+        background-image: none;
+    
+    }
+
+    .section-music {
+        height: 100%;
+        background-color: #00CDC1;
+        background-image: none;
+    }
+   
+    .section-about {
+        height: 100%;
+        font-size: 120%;
+        background-color: #63066A;
+        background-image: none;
+    }
+    
+    .ep  {
+        width: 96%;
+        margin-left: 2%;
+        
+    
+    }
+    .section-tour {
+    
+        background-color: #44CA9C;
+        background-image: none;
+    }
+    
+    .section-videos {
+    
+        background-color: #43B2C8;
+        background-image: none;
+    }
+    
+    .section-gallery {
+        height: 50vh;
+    }
+    
+    .contact-container {
+        height: 100%;
+        background-color: #000000;
+        background-image: none;
+        
+    }
+    
+    .box img{
+        width: 50%;
+        margin-left: 25%;
+        margin-top: 5%;
+        
+}
+    
+    /*   */
+    
+    h1{font-size: 350%;}
+    h2{font-size: 180%;}
+   
+
+    .col {margin: 0 0 1px 0;}
+    
+
+
+/* for small phones 0-480px*/
+
+@media only screen and (max-width: 480px){
+    
+    .contact-form{ width: 100%;}
+    section{padding: 25px 0;}
+    
+    header {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+    }
+    
+
+
+        
+        
+
+
+
+    
